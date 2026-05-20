@@ -1,24 +1,10 @@
-# Roteiro de Aula - API de Livros com FastAPI
-
+# Roteiro de Aula — API de Livros com FastAPI
 
 ## 1. Criar a pasta do projeto
 
-## 1.1 Criar arquivo main.py
-
-
-```python
-
-from fastapi import FastAPI, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
+```bash
+mkdir api-livros
+cd api-livros
 ```
 
 ## 2. Criar o ambiente virtual
@@ -28,8 +14,6 @@ python -m venv venv
 ```
 
 > O `venv` isola as dependências do projeto, evitando conflitos com outros projetos Python.
-
----
 
 ## 3. Ativar o ambiente virtual
 
@@ -45,8 +29,6 @@ source venv/bin/activate
 
 > Você saberá que funcionou quando aparecer `(venv)` no início do terminal.
 
----
-
 ## 4. Instalar as dependências
 
 ```bash
@@ -56,8 +38,15 @@ pip install fastapi uvicorn
 - **FastAPI** → framework para criar a API
 - **uvicorn** → servidor que vai rodar a aplicação
 
----
+## 5. Criar o arquivo principal
 
+Crie o arquivo `main.py` e adicione as configurações iniciais:
+
+```python
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
+```
 
 ## 6. Rodar o servidor
 
