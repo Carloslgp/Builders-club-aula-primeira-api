@@ -42,10 +42,13 @@ pip install fastapi uvicorn
 
 Crie o arquivo `main.py` e adicione as configurações iniciais:
 
+
 ```python
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+
+app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
